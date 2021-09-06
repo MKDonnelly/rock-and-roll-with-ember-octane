@@ -20,6 +20,7 @@ module.exports = function (environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      SERVER_HOST: 'http://localhost:5000/v1/'
     },
   };
 
