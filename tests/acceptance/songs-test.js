@@ -16,7 +16,7 @@ module('Acceptance | Songs', function(hooks) {
     });
     this.server.create('song', { title: 'Elephants', rating: 4, band })
     this.server.create('song', {
-      title: 'Spinning in Daffodils',
+      title: 'Spinning In Daffodils',
       rating: 5,
       band
     });
@@ -34,7 +34,7 @@ module('Acceptance | Songs', function(hooks) {
     assert
       .dom('[data-test-rr=song-list-item]:last-child')
       .hasText(
-        'Spinning in Daffodils',
+        'Spinning In Daffodils',
         'The last song is the one that comes last in the alphabet'
       );
 
@@ -42,7 +42,7 @@ module('Acceptance | Songs', function(hooks) {
     assert
       .dom('[data-test-rr=song-list-item]:first-child')
       .hasText(
-        'Spinning in Daffodils',
+        'Spinning In Daffodils',
         'The first song is the one that comes last in the alphabet'
       );
     assert
@@ -63,7 +63,7 @@ module('Acceptance | Songs', function(hooks) {
       .hasText('Mind Eraser, No Chaser', 'The first song is the lowest rated');
     assert
       .dom('[data-test-rr=song-list-item]:last-child')
-      .hasText('Spinning in Daffodils', 'The last song is the highest rated');
+      .hasText('Spinning In Daffodils', 'The last song is the highest rated');
 
     assert.ok(
       currentURL().includes('s=rating'),
@@ -73,7 +73,7 @@ module('Acceptance | Songs', function(hooks) {
     await click('[data-test-rr=sort-by-rating-desc]');
     assert
       .dom('[data-test-rr=song-list-item]:first-child')
-      .hasText('Spinning in Daffodils', 'The first song is the highest rated');
+      .hasText('Spinning In Daffodils', 'The first song is the highest rated');
     assert
       .dom('[data-test-rr=song-list-item]:last-child')
       .hasText('Mind Eraser, No Chaser', 'The last song is the lowest rated');
@@ -88,7 +88,7 @@ module('Acceptance | Songs', function(hooks) {
     let band = this.server.create('band', { name: 'Them Crooked Vultures' });
     this.server.create('song', { title: 'Mind Eraser, No Chaser', rating: 2, band, });
     this.server.create('song', { title: 'Elephants', rating: 4, band, });
-    this.server.create('song', { title: 'Spinning in Daffodils', rating: 5, band, });
+    this.server.create('song', { title: 'Spinning In Daffodils', rating: 5, band, });
     this.server.create('song', { title: 'New Fang', rating: 3, band, });
     this.server.create('song', { title: 'No One Loves Me & Neither Do I', rating: 4, band, });
 
